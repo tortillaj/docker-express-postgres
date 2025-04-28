@@ -1,5 +1,4 @@
-import express, {Express} from 'express'
-import {Router} from 'express'
+import express, {Express, Router} from 'express'
 
 export async function createExpressApp() {
     const app = express()
