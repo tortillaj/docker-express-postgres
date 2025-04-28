@@ -1,4 +1,5 @@
 node_modules
 .idea
+.env
 build
 docker_test_db

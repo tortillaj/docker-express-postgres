@@ -24,7 +24,7 @@ services:
       args:
         - PORT = ${PORT}
     ports:
-      - 3001:${PORT}
+      - ${PORT}:${PORT}
     env_file:
       - .env
     volumes:
