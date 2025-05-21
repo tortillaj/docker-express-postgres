@@ -1,7 +1,7 @@
 import {createExpressApp} from './app'
 import {Server} from "http";
 
-const port = process.env.PORT || 4000
+const port = process.env.SERVER_PORT || 4000
 
 let server: Server
 

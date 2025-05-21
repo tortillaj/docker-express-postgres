@@ -1,17 +1,18 @@
-import express, {Express} from 'express'
-import {Router} from 'express'
+import express from 'express'
+import { Router } from 'express'
 
 export async function createExpressApp() {
-    const app = express()
-    const router = Router()
+  const router = Router()
 
-    router.get('/', async (req, res) => {
-        res.status(200).json({message: 'Hello world'})
-    })
+  router.get('/', async (req, res) => {
+    res.status(200).json({ message: 'Hello world' })
+  })
 
-    app.use(express.json({limit: '100mb'}))
+  const app = express()
 
-    app.use('/api', router)
+  app.use(express.json({ limit: '100mb' }))
 
-    return app
+  app.use('/api', router)
+
+  return app
 }
