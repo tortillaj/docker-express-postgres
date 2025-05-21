@@ -28,7 +28,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - PORT = ${PORT}
+        - PORT=${PORT}
     ports:
       - ${PORT}:${PORT}
     env_file:
